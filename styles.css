@@ -75,9 +75,7 @@ body {
     text-align: justify;
     cursor: pointer;
     transition: transform 0.2s ease;
-   
     padding: 15px;
-   
 }
 
 .book-item:hover {
@@ -88,7 +86,6 @@ body {
     font-size: 22px;
     margin-bottom: 10px;
     font-weight: bold;
-    
 }
 
 .book-description {
@@ -115,7 +112,7 @@ body {
 #modalTitle {
     font-size: 24px;  /* Make the modal title larger */
     font-weight: bold;
-    margin-botom: 15px; /* Add space below the title */
+    margin-bottom: 15px; /* Fixed typo here (margin-botom → margin-bottom) */
 }
 
 #modalDescription {
