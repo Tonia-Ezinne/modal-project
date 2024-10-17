@@ -1,0 +1,138 @@
+/* Basic styling for the page */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+/* Centering the .books container */
+.books {
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;  /* Allow books to wrap */
+    justify-content: center;  /* Center align the books horizontally */
+    padding: 20px;
+}
+
+/* Modal styles */
+.modal {
+    display: none;  /* Hidden by default */
+    position: fixed;
+    z-index: 1;  /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;  /* Hidden by default */
+    transition: opacity 0.3s ease;
+}
+
+.modal.show {
+    display: block;
+    opacity: 1;
+}
+
+.modal-content {
+    position: relative;
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 8px;
+    width: 60%;
+    max-width: 600px;
+    background-color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: left; /* Left-align the text in the modal */
+    max-height: 70vh; /* Limit the height of the modal to 80% of the viewport height */
+    overflow-y: auto; /* Enable vertical scrolling if content overflows */
+}
+
+/* Make the close button always visible and positioned correctly */
+.close {
+    color: #fff;
+    font-size: 30px;
+    font-weight: normal;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+/* Book items */
+.book-item {
+    margin: 20px;
+    border-radius: 8px;
+    width: 300px;
+    margin: 10px auto;
+    text-align: justify;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+   
+    padding: 15px;
+   
+}
+
+.book-item:hover {
+    transform: scale(1.05);
+}
+
+.book-title {
+    font-size: 22px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    
+}
+
+.book-description {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 10px;
+    text-align: justify; /* Ensure description is justified */
+}
+
+/* Smooth fade-in animation for the modal content */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Modal Title and Description */
+#modalTitle {
+    font-size: 24px;  /* Make the modal title larger */
+    font-weight: bold;
+    margin-botom: 15px; /* Add space below the title */
+}
+
+#modalDescription {
+    font-size: 18px;
+    color: #333;
+    line-height: 1.6;
+    margin-bottom: 20px;  /* Add space after the description */
+}
+
+/* Optional: Add some padding to the modal content */
+.modal-content p {
+    padding-bottom: 10px;
+}
+
+/* Close button hover effect */
+.close:hover,
+.close:focus {
+    background-color: rgba(0, 0, 0, 0.6);
+    transition: background-color 0.3s ease;
+}
